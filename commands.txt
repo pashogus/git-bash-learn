@@ -1,0 +1,220 @@
+user@HARSHINI MINGW64 /
+$ git version
+git version 2.28.0.windows.1
+
+user@HARSHINI MINGW64 /
+$ pwd
+/
+
+user@HARSHINI MINGW64 /
+$ cd G:\
+>
+
+user@HARSHINI MINGW64 /g
+$ pwdd
+bash: pwdd: command not found
+
+user@HARSHINI MINGW64 /g
+$ pwd
+/g
+
+user@HARSHINI MINGW64 /g
+$ pwd
+/g
+
+user@HARSHINI MINGW64 /g
+$ ls
+
+
+user@HARSHINI MINGW64 /g
+$ cd Projects
+
+user@HARSHINI MINGW64 /g/Projects
+$ pwd
+/g/Projects
+
+user@HARSHINI MINGW64 /g/Projects
+$ git config --global --list
+fatal: unable to read config file 'C:/Users/user/.gitconfig': No such file or directory
+
+user@HARSHINI MINGW64 /g/Projects
+$ git config --global user.name  "pashogus"
+
+user@HARSHINI MINGW64 /g/Projects
+$ git config --global --list
+user.name=pashogus
+
+user@HARSHINI MINGW64 /g/Projects
+$ git clone git@github.com:pashogus/git-bash-learn.git
+Cloning into 'git-bash-learn'...
+The authenticity of host 'github.com (13.234.176.102)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? no
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+user@HARSHINI MINGW64 /g/Projects
+$ git clone https://github.com/pashogus/git-bash-learn.git
+Cloning into 'git-bash-learn'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 614 bytes | 1024 bytes/s, done.
+
+user@HARSHINI MINGW64 /g/Projects
+$ pwd
+/g/Projects
+
+user@HARSHINI MINGW64 /g/Projects
+$ ls
+git-bash-learn/
+
+user@HARSHINI MINGW64 /g/Projects
+$ cd git-bash-learn
+
+user@HARSHINI MINGW64 /g/Projects/git-bash-learn (master)
+$ ls
+README.md
+
+user@HARSHINI MINGW64 /g/Projects/git-bash-learn (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+user@HARSHINI MINGW64 /g/Projects/git-bash-learn (master)
+$ pwd
+/g/Projects/git-bash-learn
+
+user@HARSHINI MINGW64 /g/Projects/git-bash-learn (master)
+$ echo "test demo" >> start.txt
+
+user@HARSHINI MINGW64 /g/Projects/git-bash-learn (master)
+$ ls
+README.md  start.txt
+
+user@HARSHINI MINGW64 /g/Projects/git-bash-learn (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        start.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@HARSHINI MINGW64 /g/Projects/git-bash-learn (master)
+$ git add start.txt
+warning: LF will be replaced by CRLF in start.txt.
+The file will have its original line endings in your working directory
+
+user@HARSHINI MINGW64 /g/Projects/git-bash-learn (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   start.txt
+
+
+user@HARSHINI MINGW64 /g/Projects/git-bash-learn (master)
+$ git commit -m "initial commit"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'user@HARSHINI.(none)')
+
+user@HARSHINI MINGW64 /g/Projects/git-bash-learn (master)
+$ git config user.email "shansasi.28@gmail.com"
+
+user@HARSHINI MINGW64 /g/Projects/git-bash-learn (master)
+$ git config user.name "pashogus"
+
+user@HARSHINI MINGW64 /g/Projects/git-bash-learn (master)
+$ got config --list
+bash: got: command not found
+
+user@HARSHINI MINGW64 /g/Projects/git-bash-learn (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+user.name=pashogus
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.origin.url=https://github.com/pashogus/git-bash-learn.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+user.email=shansasi.28@gmail.com
+user.name=pashogus
+
+user@HARSHINI MINGW64 /g/Projects/git-bash-learn (master)
+$ git config --global --list
+user.name=pashogus
+
+user@HARSHINI MINGW64 /g/Projects/git-bash-learn (master)
+$ git cpmmit -m "initial commit"
+git: 'cpmmit' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+user@HARSHINI MINGW64 /g/Projects/git-bash-learn (master)
+$ git commit -m "initila commit"
+[master 415bd58] initila commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 start.txt
+
+user@HARSHINI MINGW64 /g/Projects/git-bash-learn (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+user@HARSHINI MINGW64 /g/Projects/git-bash-learn (master)
+$ ls
+README.md  start.txt
+
+user@HARSHINI MINGW64 /g/Projects/git-bash-learn (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 284 bytes | 94.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/pashogus/git-bash-learn.git
+   24756b2..415bd58  master -> master
+
+user@HARSHINI MINGW64 /g/Projects/git-bash-learn (master)
+$
