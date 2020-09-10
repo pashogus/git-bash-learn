@@ -1,0 +1,371 @@
+user@HARSHINI MINGW64 /
+$ notepad++
+
+user@HARSHINI MINGW64 /
+$ notepad++
+
+user@HARSHINI MINGW64 /
+$ ~/.gotconfig
+bash: /c/Users/user/.gotconfig: No such file or directory
+
+user@HARSHINI MINGW64 /
+$ ~/.gitconfig
+/c/Users/user/.gitconfig: line 1: [user]: command not found
+/c/Users/user/.gitconfig: line 2: name: command not found
+
+user@HARSHINI MINGW64 /
+$ cat ~/.gitconfig
+[user]
+        name = pashogus
+
+user@HARSHINI MINGW64 /
+$  cd g:/projects
+
+user@HARSHINI MINGW64 /g/projects
+$ pwd
+/g/projects
+
+user@HARSHINI MINGW64 /g/projects
+$ git init new-fresh
+Initialized empty Git repository in G:/Projects/new-fresh/.git/
+
+user@HARSHINI MINGW64 /g/projects
+$ ls
+git-bash-learn/  new-fresh/
+
+user@HARSHINI MINGW64 /g/projects
+$ cd new-fresh/
+
+user@HARSHINI MINGW64 /g/projects/new-fresh (master)
+$ ls
+
+user@HARSHINI MINGW64 /g/projects/new-fresh (master)
+$ ls -al
+total 4
+drwxr-xr-x 1 user 197121 0 Sep 10 18:08 ./
+drwxr-xr-x 1 user 197121 0 Sep 10 18:08 ../
+drwxr-xr-x 1 user 197121 0 Sep 10 18:08 .git/
+
+user@HARSHINI MINGW64 /g/projects/new-fresh (master)
+$ cd /../
+
+user@HARSHINI MINGW64 /
+$ pwd
+/
+
+user@HARSHINI MINGW64 /
+$ ls
+bin/  cmd/  dev/  etc/  git-bash.exe*  git-cmd.exe*  LICENSE.txt  mingw64/  proc/  ReleaseNotes.html  tmp/  unins000.dat  unins000.exe*  unins000.msg  usr/
+
+user@HARSHINI MINGW64 /
+$ cd g/projects
+
+user@HARSHINI MINGW64 /g/projects
+$ ls
+git-bash-learn/  new-fresh/
+
+user@HARSHINI MINGW64 /g/projects
+$ unzip ~/D
+Desktop/   Documents/ Downloads/
+
+user@HARSHINI MINGW64 /g/projects
+$ unzip ~/D
+Desktop/   Documents/ Downloads/
+
+user@HARSHINI MINGW64 /g/projects
+$ unzip ~/Downloads/i
+images (1).jpeg             initializr-verekia-4.0.zip
+
+user@HARSHINI MINGW64 /g/projects
+$ unzip ~/Downloads/i
+images (1).jpeg             initializr-verekia-4.0.zip
+
+user@HARSHINI MINGW64 /g/projects
+$ unzip ~/Downloads/initializr-verekia-4.0.zip
+Archive:  /c/Users/user/Downloads/initializr-verekia-4.0.zip
+  inflating: initializr/index.html
+  inflating: initializr/css/main.css
+  inflating: initializr/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js
+  inflating: initializr/css/normalize.css
+  inflating: initializr/css/normalize.min.css
+  inflating: initializr/apple-touch-icon.png
+  inflating: initializr/browserconfig.xml
+  inflating: initializr/tile-wide.png
+  inflating: initializr/tile.png
+  inflating: initializr/js/vendor/jquery-1.11.2.min.js
+  inflating: initializr/js/main.js
+  inflating: initializr/favicon.ico
+   creating: initializr/img/
+
+user@HARSHINI MINGW64 /g/projects
+$ ls
+git-bash-learn/  initializr/  new-fresh/
+
+user@HARSHINI MINGW64 /g/projects
+$ mv initializr web-domloaded
+
+user@HARSHINI MINGW64 /g/projects
+$ ls
+git-bash-learn/  new-fresh/  web-domloaded/
+
+user@HARSHINI MINGW64 /g/projects
+$ cd web-domloaded
+
+user@HARSHINI MINGW64 /g/projects/web-domloaded
+$ ls
+apple-touch-icon.png  browserconfig.xml  css/  favicon.ico  img/  index.html  js/  tile.png  tile-wide.png
+
+user@HARSHINI MINGW64 /g/projects/web-domloaded
+$ pwd
+/g/projects/web-domloaded
+
+user@HARSHINI MINGW64 /g/projects/web-domloaded
+$ git init
+Initialized empty Git repository in G:/Projects/web-domloaded/.git/
+
+user@HARSHINI MINGW64 /g/projects/web-domloaded (master)
+$ ls
+apple-touch-icon.png  browserconfig.xml  css/  favicon.ico  img/  index.html  js/  tile.png  tile-wide.png
+
+user@HARSHINI MINGW64 /g/projects/web-domloaded (master)
+$ ls -al
+total 33
+drwxr-xr-x 1 user 197121    0 Sep 10 18:24 ./
+drwxr-xr-x 1 user 197121    0 Sep 10 18:23 ../
+drwxr-xr-x 1 user 197121    0 Sep 10 18:24 .git/
+-rw-r--r-- 1 user 197121 3959 Sep 10 12:49 apple-touch-icon.png
+-rw-r--r-- 1 user 197121  416 Sep 10 12:49 browserconfig.xml
+drwxr-xr-x 1 user 197121    0 Sep 10 18:22 css/
+-rw-r--r-- 1 user 197121  766 Sep 10 12:49 favicon.ico
+drwxr-xr-x 1 user 197121    0 Sep 10 12:49 img/
+-rw-r--r-- 1 user 197121 5069 Sep 10 12:49 index.html
+drwxr-xr-x 1 user 197121    0 Sep 10 18:22 js/
+-rw-r--r-- 1 user 197121 3482 Sep 10 12:49 tile.png
+-rw-r--r-- 1 user 197121 1854 Sep 10 12:49 tile-wide.png
+
+user@HARSHINI MINGW64 /g/projects/web-domloaded (master)
+$ pwd
+/g/projects/web-domloaded
+
+user@HARSHINI MINGW64 /g/projects/web-domloaded (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        apple-touch-icon.png
+        browserconfig.xml
+        css/
+        favicon.ico
+        index.html
+        js/
+        tile-wide.png
+        tile.png
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@HARSHINI MINGW64 /g/projects/web-domloaded (master)
+$ pwd
+/g/projects/web-domloaded
+
+user@HARSHINI MINGW64 /g/projects/web-domloaded (master)
+$ cd ..
+
+user@HARSHINI MINGW64 /g/projects
+$ pwd
+/g/projects
+
+user@HARSHINI MINGW64 /g/projects
+$ ls
+git-bash-learn/  new-fresh/  web-domloaded/
+
+user@HARSHINI MINGW64 /g/projects
+$ rm -rf web-domloaded/
+
+user@HARSHINI MINGW64 /g/projects
+$ ls
+git-bash-learn/  new-fresh/
+
+user@HARSHINI MINGW64 /g/projects
+$ unzip ~/Do
+Documents/ Downloads/
+
+user@HARSHINI MINGW64 /g/projects
+$ unzip ~/Downloads/i
+images (1).jpeg             initializr-verekia-4.0.zip
+
+user@HARSHINI MINGW64 /g/projects
+$ unzip ~/Downloads/initializr-verekia-4.0.zip
+Archive:  /c/Users/user/Downloads/initializr-verekia-4.0.zip
+  inflating: initializr/index.html
+  inflating: initializr/css/main.css
+  inflating: initializr/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js
+  inflating: initializr/css/normalize.css
+  inflating: initializr/css/normalize.min.css
+  inflating: initializr/apple-touch-icon.png
+  inflating: initializr/browserconfig.xml
+  inflating: initializr/tile-wide.png
+  inflating: initializr/tile.png
+  inflating: initializr/js/vendor/jquery-1.11.2.min.js
+  inflating: initializr/js/main.js
+  inflating: initializr/favicon.ico
+   creating: initializr/img/
+
+user@HARSHINI MINGW64 /g/projects
+$ pwd
+/g/projects
+
+user@HARSHINI MINGW64 /g/projects
+$ ls
+git-bash-learn/  initializr/  new-fresh/
+
+user@HARSHINI MINGW64 /g/projects
+$ cd initializr/
+
+user@HARSHINI MINGW64 /g/projects/initializr
+$ ls
+apple-touch-icon.png  browserconfig.xml  css/  favicon.ico  img/  index.html  js/  tile.png  tile-wide.png
+
+user@HARSHINI MINGW64 /g/projects/initializr
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+user@HARSHINI MINGW64 /g/projects/initializr
+$ git init
+Initialized empty Git repository in G:/Projects/initializr/.git/
+
+user@HARSHINI MINGW64 /g/projects/initializr (master)
+$ ls
+apple-touch-icon.png  browserconfig.xml  css/  favicon.ico  img/  index.html  js/  tile.png  tile-wide.png
+
+user@HARSHINI MINGW64 /g/projects/initializr (master)
+$ ls -al
+total 33
+drwxr-xr-x 1 user 197121    0 Sep 10 18:27 ./
+drwxr-xr-x 1 user 197121    0 Sep 10 18:27 ../
+drwxr-xr-x 1 user 197121    0 Sep 10 18:27 .git/
+-rw-r--r-- 1 user 197121 3959 Sep 10 12:49 apple-touch-icon.png
+-rw-r--r-- 1 user 197121  416 Sep 10 12:49 browserconfig.xml
+drwxr-xr-x 1 user 197121    0 Sep 10 18:27 css/
+-rw-r--r-- 1 user 197121  766 Sep 10 12:49 favicon.ico
+drwxr-xr-x 1 user 197121    0 Sep 10 12:49 img/
+-rw-r--r-- 1 user 197121 5069 Sep 10 12:49 index.html
+drwxr-xr-x 1 user 197121    0 Sep 10 18:27 js/
+-rw-r--r-- 1 user 197121 3482 Sep 10 12:49 tile.png
+-rw-r--r-- 1 user 197121 1854 Sep 10 12:49 tile-wide.png
+
+user@HARSHINI MINGW64 /g/projects/initializr (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        apple-touch-icon.png
+        browserconfig.xml
+        css/
+        favicon.ico
+        index.html
+        js/
+        tile-wide.png
+        tile.png
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@HARSHINI MINGW64 /g/projects/initializr (master)
+$ git add .
+warning: LF will be replaced by CRLF in browserconfig.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in css/main.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in css/normalize.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in js/main.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in js/vendor/jquery-1.11.2.min.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in js/vendor/modernizr-2.8.3-respond-1.4.2.min.js.
+The file will have its original line endings in your working directory
+
+user@HARSHINI MINGW64 /g/projects/initializr (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   apple-touch-icon.png
+        new file:   browserconfig.xml
+        new file:   css/main.css
+        new file:   css/normalize.css
+        new file:   css/normalize.min.css
+        new file:   favicon.ico
+        new file:   index.html
+        new file:   js/main.js
+        new file:   js/vendor/jquery-1.11.2.min.js
+        new file:   js/vendor/modernizr-2.8.3-respond-1.4.2.min.js
+        new file:   tile-wide.png
+        new file:   tile.png
+
+
+user@HARSHINI MINGW64 /g/projects/initializr (master)
+$ git commit
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'user@HARSHINI.(none)')
+
+user@HARSHINI MINGW64 /g/projects/initializr (master)
+$ git config --global --list
+user.name=pashogus
+
+user@HARSHINI MINGW64 /g/projects/initializr (master)
+$ git config --global user.email "shansasi.28@gmail.com"
+
+user@HARSHINI MINGW64 /g/projects/initializr (master)
+$ git config --global --list
+user.name=pashogus
+user.email=shansasi.28@gmail.com
+
+user@HARSHINI MINGW64 /g/projects/initializr (master)
+$ pwd
+/g/projects/initializr
+
+user@HARSHINI MINGW64 /g/projects/initializr (master)
+$ git commit
+[master (root-commit) 421dc3a] initial commit of all files
+ 12 files changed, 917 insertions(+)
+ create mode 100644 apple-touch-icon.png
+ create mode 100644 browserconfig.xml
+ create mode 100644 css/main.css
+ create mode 100644 css/normalize.css
+ create mode 100644 css/normalize.min.css
+ create mode 100644 favicon.ico
+ create mode 100644 index.html
+ create mode 100644 js/main.js
+ create mode 100644 js/vendor/jquery-1.11.2.min.js
+ create mode 100644 js/vendor/modernizr-2.8.3-respond-1.4.2.min.js
+ create mode 100644 tile-wide.png
+ create mode 100644 tile.png
+
+user@HARSHINI MINGW64 /g/projects/initializr (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+user@HARSHINI MINGW64 /g/projects/initializr (master)
+$
