@@ -1,0 +1,52 @@
+/GIT Local Repository/git Learning/git-bash-learn (newbranch)
+$ git status
+On branch newbranch
+Your branch is up to date with 'origin/newbranch'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   pushing content to new branch in remote repository with - u origin branch name
+
+
+/GIT Local Repository/git Learning/git-bash-learn (newbranch)
+$ git commit -m 'file with command to push to new remote branch'
+[newbranch cb09647] file with command to push to new remote branch
+ 1 file changed, 232 insertions(+)
+ create mode 100644 pushing content to new branch in remote repository with - u origin branch name
+git sta
+/GIT Local Repository/git Learning/git-bash-learn (newbranch)
+$ git status
+On branch newbranch
+Your branch is ahead of 'origin/newbranch' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+/GIT Local Repository/git Learning/git-bash-learn (newbranch)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git merge newbranch
+Updating 3386844..cb09647
+Fast-forward
+ ...n remote repository with - u origin branch name | 232 +++++++++++++++++++++
+ test1/branchTesting.txt                            |   2 +
+ 2 files changed, 234 insertions(+)
+ create mode 100644 pushing content to new branch in remote repository with - u origin branch name
+ create mode 100644 test1/branchTesting.txt
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git log --all --oneline --decorate --graph
+* cb09647 (HEAD -> master, newbranch) file with command to push to new remote branch
+* 78aa574 (origin/newbranch) crearted new file branchTesting.txt for Branch testing
+* 3386844 (origin/master, origin/HEAD) initial Commit
+* 58cb231 With Some Changes
+* 5966a4b how to create a new git repository by init how to make a existing project folder as git local repository adding git to existing project
+* 66754cf Commands used for understanding three stages of Git, Config setup, Status
+* 415bd58 initila commit
+* 24756b2 Initial commit
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$
