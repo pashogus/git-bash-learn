@@ -50,3 +50,56 @@ $ git log --all --oneline --decorate --graph
 
 /GIT Local Repository/git Learning/git-bash-learn (master)
 $
+
+
+
+
+git
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fast forward merge
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git commit -am 'fast forward merge'
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fast forward merge
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git add .
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git commit -m 'fast forward merge'
+[master 8289641] fast forward merge
+ 1 file changed, 52 insertions(+)
+ create mode 100644 fast forward merge
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git log --all --oneline --decorate --graph
+* 8289641 (HEAD -> master) fast forward merge
+* cb09647 (newbranch) file with command to push to new remote branch
+* 78aa574 (origin/newbranch) crearted new file branchTesting.txt for Branch testing
+* 3386844 (origin/master, origin/HEAD) initial Commit
+* 58cb231 With Some Changes
+* 5966a4b how to create a new git repository by init how to make a existing project folder as git local repository adding git to existing project
+* 66754cf Commands used for understanding three stages of Git, Config setup, Status
+* 415bd58 initila commit
+* 24756b2 Initial commit
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$
+
