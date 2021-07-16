@@ -1,0 +1,275 @@
+GIT Local Repository/git Learning/git-bash-learn (not-fast-forward-merge)
+$ vi not-fast-forward-merge.txt
+
+GIT Local Repository/git Learning/git-bash-learn (not-fast-forward-merge)
+$ git status
+On branch not-fast-forward-merge
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        not-fast-forward-merge.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+GIT Local Repository/git Learning/git-bash-learn (not-fast-forward-merge)
+$ git add .
+warning: LF will be replaced by CRLF in not-fast-forward-merge.txt.
+The file will have its original line endings in your working directory
+g
+GIT Local Repository/git Learning/git-bash-learn (not-fast-forward-merge)
+$ git commit -m 'new file for not-fast-forward-merge branch'
+[not-fast-forward-merge 567a085] new file for not-fast-forward-merge branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 not-fast-forward-merge.txt
+
+GIT Local Repository/git Learning/git-bash-learn (not-fast-forward-merge)
+$ git status
+On branch not-fast-forward-merge
+nothing to commit, working tree clean
+
+GIT Local Repository/git Learning/git-bash-learn (not-fast-forward-merge)
+$ git log --oneline --all --graph --decorate
+* 567a085 (HEAD -> not-fast-forward-merge) new file for not-fast-forward-merge branch
+* e6d3d95 (origin/master, origin/HEAD, master) fast forward merge
+* 8289641 fast forward merge
+* cb09647 (origin/newbranch) file with command to push to new remote branch
+* 78aa574 crearted new file branchTesting.txt for Branch testing
+* 3386844 initial Commit
+* 58cb231 With Some Changes
+* 5966a4b how to create a new git repository by init how to make a existing project folder as git local repository adding git to existing project
+* 66754cf Commands used for understanding three stages of Git, Config setup, Status
+* 415bd58 initila commit
+* 24756b2 Initial commit
+
+GIT Local Repository/git Learning/git-bash-learn (not-fast-forward-merge)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git merge not-fast-forward-merge --no-ff
+Merge made by the 'recursive' strategy.
+ not-fast-forward-merge.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 not-fast-forward-merge.txt
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git log --all --oneline --decorate --graph
+*   20597f6 (HEAD -> master) Merge branch 'not-fast-forward-merge'
+|\
+| * 567a085 (not-fast-forward-merge) new file for not-fast-forward-merge branch
+|/
+* e6d3d95 (origin/master, origin/HEAD) fast forward merge
+* 8289641 fast forward merge
+* cb09647 (origin/newbranch) file with command to push to new remote branch
+* 78aa574 crearted new file branchTesting.txt for Branch testing
+* 3386844 initial Commit
+* 58cb231 With Some Changes
+* 5966a4b how to create a new git repository by init how to make a existing project folder as git local repository adding git to existing project
+* 66754cf Commands used for understanding three stages of Git, Config setup, Status
+* 415bd58 initila commit
+* 24756b2 Initial commit
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ gti checkout not-fast-forward-merge
+bash: gti: command not found
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git checkout not-fast-forward-merge
+Switched to branch 'not-fast-forward-merge'
+
+GIT Local Repository/git Learning/git-bash-learn (not-fast-forward-merge)
+$ vi not-fast-forward-second-one.txt
+
+GIT Local Repository/git Learning/git-bash-learn (not-fast-forward-merge)
+$ git commit -am 'adding new file in not-fast-forward-merge branch'
+On branch not-fast-forward-merge
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        not-fast-forward-second-one.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+GIT Local Repository/git Learning/git-bash-learn (not-fast-forward-merge)
+$ git add .
+warning: LF will be replaced by CRLF in not-fast-forward-second-one.txt.
+The file will have its original line endings in your working directory
+
+GIT Local Repository/git Learning/git-bash-learn (not-fast-forward-merge)
+$ git commit -m 'adding new file in not-fast-forward-merge branch'
+[not-fast-forward-merge 17bc443] adding new file in not-fast-forward-merge branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 not-fast-forward-second-one.txt
+
+GIT Local Repository/git Learning/git-bash-learn (not-fast-forward-merge)
+$ git log --all --oneline --decorate --graph
+* 17bc443 (HEAD -> not-fast-forward-merge) adding new file in not-fast-forward-merge branch
+| *   20597f6 (master) Merge branch 'not-fast-forward-merge'
+| |\
+| |/
+|/|
+* | 567a085 new file for not-fast-forward-merge branch
+|/
+* e6d3d95 (origin/master, origin/HEAD) fast forward merge
+* 8289641 fast forward merge
+* cb09647 (origin/newbranch) file with command to push to new remote branch
+* 78aa574 crearted new file branchTesting.txt for Branch testing
+* 3386844 initial Commit
+* 58cb231 With Some Changes
+* 5966a4b how to create a new git repository by init how to make a existing project folder as git local repository adding git to existing project
+* 66754cf Commands used for understanding three stages of Git, Config setup, Status
+* 415bd58 initila commit
+* 24756b2 Initial commit
+
+GIT Local Repository/git Learning/git-bash-learn (not-fast-forward-merge)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git merge not-fast-forward-merge --no--ff
+error: unknown option `no--ff'
+usage: git merge [<options>] [<commit>...]
+   or: git merge --abort
+   or: git merge --continue
+
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge
+    --summary             (synonym to --stat)
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    -e, --edit            edit message before committing
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --ff                  allow fast-forward (default)
+    --ff-only             abort if fast-forward is not possible
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --verify-signatures   verify that the named commit has a valid GPG signature
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option=value>
+                          option for selected merge strategy
+    -m, --message <message>
+                          merge commit message (for a non-fast-forward merge)
+    -F, --file <path>     read message from file
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --abort               abort the current in-progress merge
+    --quit                --abort but leave index and working tree alone
+    --continue            continue the current in-progress merge
+    --allow-unrelated-histories
+                          allow merging unrelated histories
+    --progress            force progress reporting
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --autostash           automatically stash/stash pop before and after
+    --overwrite-ignore    update ignored files (default)
+    --signoff             add a Signed-off-by trailer
+    --no-verify           bypass pre-merge-commit and commit-msg hooks
+
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git merge not-fast-forward-merge --no-ff
+Merge made by the 'recursive' strategy.
+ not-fast-forward-second-one.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 not-fast-forward-second-one.txt
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git log --all --oneline --decorate --graph
+*   effd73d (HEAD -> master) Merge branch 'not-fast-forward-merge with master for adding not-fast-forwd-merge txt file'
+|\
+| * 17bc443 (not-fast-forward-merge) adding new file in not-fast-forward-merge branch
+* | 20597f6 Merge branch 'not-fast-forward-merge'
+|\|
+| * 567a085 new file for not-fast-forward-merge branch
+|/
+* e6d3d95 (origin/master, origin/HEAD) fast forward merge
+* 8289641 fast forward merge
+* cb09647 (origin/newbranch) file with command to push to new remote branch
+* 78aa574 crearted new file branchTesting.txt for Branch testing
+* 3386844 initial Commit
+* 58cb231 With Some Changes
+* 5966a4b how to create a new git repository by init how to make a existing project folder as git local repository adding git to existing project
+* 66754cf Commands used for understanding three stages of Git, Config setup, Status
+* 415bd58 initila commit
+* 24756b2 Initial commit
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git checkout not-fast-forward-merge
+Switched to branch 'not-fast-forward-merge'
+
+GIT Local Repository/git Learning/git-bash-learn (not-fast-forward-merge)
+$ vi non-fast-forward-3.txt
+
+GIT Local Repository/git Learning/git-bash-learn (not-fast-forward-merge)
+$ git add .
+warning: LF will be replaced by CRLF in non-fast-forward-3.txt.
+The file will have its original line endings in your working directory
+
+GIT Local Repository/git Learning/git-bash-learn (not-fast-forward-merge)
+$ git commit -m 'file  number 3 for not-fast-forward-merge branch'
+[not-fast-forward-merge f378f1c] file  number 3 for not-fast-forward-merge branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 non-fast-forward-3.txt
+
+GIT Local Repository/git Learning/git-bash-learn (not-fast-forward-merge)
+$ vi non-fast-forward-4.txt
+
+GIT Local Repository/git Learning/git-bash-learn (not-fast-forward-merge)
+$ git add .
+warning: LF will be replaced by CRLF in non-fast-forward-4.txt.
+The file will have its original line endings in your working directory
+
+GIT Local Repository/git Learning/git-bash-learn (not-fast-forward-merge)
+$ git commit -m 'file  number 4 for not-fast-forward-merge branch'
+[not-fast-forward-merge 7155eb8] file  number 4 for not-fast-forward-merge branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 non-fast-forward-4.txt
+
+GIT Local Repository/git Learning/git-bash-learn (not-fast-forward-merge)
+$ git status
+On branch not-fast-forward-merge
+nothing to commit, working tree clean
+
+GIT Local Repository/git Learning/git-bash-learn (not-fast-forward-merge)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git merge not-fast-forward-merge --no-ff
+Merge made by the 'recursive' strategy.
+ non-fast-forward-3.txt | 1 +
+ non-fast-forward-4.txt | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 non-fast-forward-3.txt
+ create mode 100644 non-fast-forward-4.txt
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git log --all --oneline --decorate --graph
+*   aece2b5 (HEAD -> master) Merge branch 'not-fast-forward-merge with newly created file 3 and 4'
+|\
+| * 7155eb8 (not-fast-forward-merge) file  number 4 for not-fast-forward-merge branch
+| * f378f1c file  number 3 for not-fast-forward-merge branch
+* | effd73d Merge branch 'not-fast-forward-merge with master for adding not-fast-forwd-merge txt file'
+|\|
+| * 17bc443 adding new file in not-fast-forward-merge branch
+* | 20597f6 Merge branch 'not-fast-forward-merge'
+|\|
+| * 567a085 new file for not-fast-forward-merge branch
+|/
+* e6d3d95 (origin/master, origin/HEAD) fast forward merge
+* 8289641 fast forward merge
+* cb09647 (origin/newbranch) file with command to push to new remote branch
+* 78aa574 crearted new file branchTesting.txt for Branch testing
+* 3386844 initial Commit
+* 58cb231 With Some Changes
+* 5966a4b how to create a new git repository by init how to make a existing project folder as git local repository adding git to existing project
+* 66754cf Commands used for understanding three stages of Git, Config setup, Status
+* 415bd58 initila commit
+* 24756b2 Initial commit
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$
