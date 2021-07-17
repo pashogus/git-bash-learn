@@ -1,0 +1,256 @@
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        calculator/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git add -A
+warning: LF will be replaced by CRLF in calculator/.gitignore.
+The file will have its original line endings in your working directory
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git commit -m 'Initial commit for Calc Project'
+[master 2260cf2] Initial commit for Calc Project
+ 9 files changed, 86 insertions(+)
+ create mode 100644 calculator/.classpath
+ create mode 100644 calculator/.gitignore
+ create mode 100644 calculator/.project
+ create mode 100644 calculator/src/pashogus/addition/Addition.java
+ create mode 100644 calculator/src/pashogus/addition/package-info.java
+ create mode 100644 calculator/src/pashogus/main/Main.java
+ create mode 100644 calculator/src/pashogus/main/package-info.java
+ create mode 100644 calculator/src/pashogus/subraction/Subraction.java
+ create mode 100644 calculator/src/pashogus/subraction/package-info.java
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git push
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (15/15), 1.53 KiB | 391.00 KiB/s, done.
+Total 15 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/pashogus/git-bash-learn.git
+   628d31d..2260cf2  master -> master
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git checkout -b addition
+Switched to a new branch 'addition'
+
+/GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git status\
+> ^C
+
+
+
+/GIT Local Repository/git Learning/git-bash-learn (addition)
+$
+
+git
+/GIT Local Repository/git Learning/git-bash-learn (addition)
+$
+
+/GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git status
+On branch addition
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        calculator/src/pashogus/addition/AdditionImpl.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+gi
+/GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git add -A
+
+/GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git commit -m 'addition of two integers'
+[addition f759549] addition of two integers
+ 1 file changed, 10 insertions(+)
+ create mode 100644 calculator/src/pashogus/addition/AdditionImpl.java
+
+/GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git push -u origin addition
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 722 bytes | 361.00 KiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'addition' on GitHub by visiting:
+remote:      https://github.com/pashogus/git-bash-learn/pull/new/addition
+remote:
+To https://github.com/pashogus/git-bash-learn.git
+ * [new branch]      addition -> addition
+Branch 'addition' set up to track remote branch 'addition' from 'origin'.
+
+/GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git checkout -b subraction
+Switched to a new branch 'subraction'
+
+/GIT Local Repository/git Learning/git-bash-learn (subraction)
+$ git status
+On branch subraction
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        calculator/src/pashogus/subraction/SubractionImpl.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+git
+/GIT Local Repository/git Learning/git-bash-learn (subraction)
+$ git add -A
+
+/GIT Local Repository/git Learning/git-bash-learn (subraction)
+$ git commit -m 'subraction of two intergers'
+[subraction 63e3902] subraction of two intergers
+ 1 file changed, 17 insertions(+)
+ create mode 100644 calculator/src/pashogus/subraction/SubractionImpl.java
+
+/GIT Local Repository/git Learning/git-bash-learn (subraction)
+$ git push -u origin subraction
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 697 bytes | 348.00 KiB/s, done.
+Total 7 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+remote:
+remote: Create a pull request for 'subraction' on GitHub by visiting:
+remote:      https://github.com/pashogus/git-bash-learn/pull/new/subraction
+remote:
+To https://github.com/pashogus/git-bash-learn.git
+ * [new branch]      subraction -> subraction
+Branch 'subraction' set up to track remote branch 'subraction' from 'origin'.
+
+/GIT Local Repository/git Learning/git-bash-learn (subraction)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git merge addition --no-ff
+Merge made by the 'recursive' strategy.
+ calculator/src/pashogus/addition/AdditionImpl.java | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+ create mode 100644 calculator/src/pashogus/addition/AdditionImpl.java
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git merge subraction --no-ff
+Merge made by the 'recursive' strategy.
+ calculator/src/pashogus/subraction/SubractionImpl.java | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+ create mode 100644 calculator/src/pashogus/subraction/SubractionImpl.java
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   calculator/src/pashogus/main/Main.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git add .
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git commit -m 'calculator for two integers with addition and Subraction'
+[master bfd6470] calculator for two integers with addition and Subraction
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git push
+Enumerating objects: 31, done.
+Counting objects: 100% (27/27), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (13/13), 1.44 KiB | 491.00 KiB/s, done.
+Total 13 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 3 local objects.
+To https://github.com/pashogus/git-bash-learn.git
+   2260cf2..bfd6470  master -> master
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git tag -a V-1.0
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git push v-1.0
+fatal: 'v-1.0' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git push origin v-1.0
+fatal: v-1.0 cannot be resolved to branch
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git log --all --oneline --decorate --graph
+* bfd6470 (HEAD -> master, tag: V-1.0, origin/master, origin/HEAD) calculator for two integers with addition and Subraction
+*   f3ed7ce Merge branch 'subraction' with subraction of two integers
+|\
+| * 63e3902 (origin/subraction, subraction) subraction of two intergers
+* |   2d2aa8e Merge branch 'addition' with addition of two int method
+|\ \
+| |/
+|/|
+| * f759549 (origin/addition, addition) addition of two integers
+|/
+* 2260cf2 Initial commit for Calc Project
+* 628d31d Deleting changes
+* 1327402 updated Changes for int addition
+* f0c1a33 Commit with changes for Addition of integers
+* 2396385 Initial Commit for new project
+* 3cb8340 With branching and merging exercises
+*   aece2b5 Merge branch 'not-fast-forward-merge with newly created file 3 and 4'
+|\
+| * 7155eb8 (origin/not-fast-forward-merge, not-fast-forward-merge) file  number 4 for not-fast-forward-merge branch
+| * f378f1c file  number 3 for not-fast-forward-merge branch
+* | effd73d Merge branch 'not-fast-forward-merge with master for adding not-fast-forwd-merge txt file'
+|\|
+| * 17bc443 adding new file in not-fast-forward-merge branch
+* | 20597f6 Merge branch 'not-fast-forward-merge'
+|\|
+| * 567a085 new file for not-fast-forward-merge branch
+|/
+* e6d3d95 fast forward merge
+* 8289641 fast forward merge
+* cb09647 (origin/newbranch) file with command to push to new remote branch
+* 78aa574 crearted new file branchTesting.txt for Branch testing
+* 3386844 initial Commit
+* 58cb231 With Some Changes
+* 5966a4b how to create a new git repository by init how to make a existing project folder as git local repository adding git to existing project
+* 66754cf Commands used for understanding three stages of Git, Config setup, Status
+* 415bd58 initila commit
+* 24756b2 Initial commit
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git push origin V-1.0
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 209 bytes | 209.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/pashogus/git-bash-learn.git
+ * [new tag]         V-1.0 -> V-1.0
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$
