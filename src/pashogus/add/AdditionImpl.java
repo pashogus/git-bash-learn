@@ -1,4 +1,4 @@
-package pashogus.main;
+package pashogus.add;
 
 public class AdditionImpl implements Addition {
 

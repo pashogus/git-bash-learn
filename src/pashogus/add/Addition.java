@@ -1,7 +1,7 @@
 /**
  * 
  */
-package pashogus.main;
+package pashogus.add;
 
 /**
  * @author 540091

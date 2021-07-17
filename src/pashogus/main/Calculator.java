@@ -1,4 +1,4 @@
-package pashogus.add;
+package pashogus.main;
 
 public class Calculator {
 
