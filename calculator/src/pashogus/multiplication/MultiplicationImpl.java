@@ -14,8 +14,8 @@ public class MultiplicationImpl implements Multipliction {
 	 */
 	@Override
 	public int multiply(int a, int b) {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		return a*b;
 	}
 
 }
