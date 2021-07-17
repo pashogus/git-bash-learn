@@ -1,0 +1,284 @@
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Commands for V-1.0
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Commands for V-1.0
+        calculator/src/pashogus/multiplication/
+
+nothing added to commit but untracked files present (use "git add" to track)
+git add
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git add -A
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git commit -m 'Adding new Functionality for Multiplication of Two Integers'
+[master 5159ba9] Adding new Functionality for Multiplication of Two Integers
+ 4 files changed, 298 insertions(+)
+ create mode 100644 Commands for V-1.0
+ create mode 100644 calculator/src/pashogus/multiplication/MultiplicationImpl.java
+ create mode 100644 calculator/src/pashogus/multiplication/Multipliction.java
+ create mode 100644 calculator/src/pashogus/multiplication/package-info.java
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git push
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (10/10), 3.29 KiB | 1.10 MiB/s, done.
+Total 10 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/pashogus/git-bash-learn.git
+   bfd6470..5159ba9  master -> master
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git checkout addition
+Switched to branch 'addition'
+Your branch is up to date with 'origin/addition'.
+
+GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git rebase master
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+
+GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git status
+On branch addition
+Your branch is up to date with 'origin/addition'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   calculator/src/pashogus/main/Main.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git commit -m 'updated Changes for addition of two numbers after Merging with Master'
+On branch addition
+Your branch is up to date with 'origin/addition'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   calculator/src/pashogus/main/Main.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git add -A
+
+GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git status
+On branch addition
+Your branch is up to date with 'origin/addition'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   calculator/src/pashogus/main/Main.java
+
+
+GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git commit -m 'updated Changes for addition of two numbers after Merging with Master'
+[addition 5f46c32] updated Changes for addition of two numbers after Merging with Master
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git push
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 643 bytes | 321.00 KiB/s, done.
+Total 7 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/pashogus/git-bash-learn.git
+   f759549..5f46c32  addition -> addition
+
+GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git rebase master
+error: could not apply 5f46c32... updated Changes for addition of two numbers after Merging with Master
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm <conflicted_files>", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 5f46c32... updated Changes for addition of two numbers after Merging with Master
+Auto-merging calculator/src/pashogus/main/Main.java
+CONFLICT (content): Merge conflict in calculator/src/pashogus/main/Main.java
+
+GIT Local Repository/git Learning/git-bash-learn (addition|REBASE 1/1)
+$ git rebase --abort
+
+GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        calculator/src/pashogus/main/Main.java
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git stash
+Saved working directory and index state WIP on addition: 5f46c32 updated Changes for addition of two numbers after Merging with Master
+
+GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git checkout
+Your branch is up to date with 'origin/addition'.
+git c
+GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git checkout addition
+Switched to branch 'addition'
+Your branch is up to date with 'origin/addition'.
+
+GIT Local Repository/git Learning/git-bash-learn (addition)
+$ pwd
+/c/Users/540091/OneDrive - Cognizant/540091_MyDriveData/GIT Local Repository/git Learning/git-bash-learn
+
+GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git status
+On branch addition
+Your branch is up to date with 'origin/addition'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        calculator-1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git checkout -b multiplication
+Switched to a new branch 'multiplication'
+
+GIT Local Repository/git Learning/git-bash-learn (multiplication)
+$ git status
+warning: could not open directory 'calculator-1/': Permission denied
+On branch multiplication
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   calculator/src/pashogus/multiplication/MultiplicationImpl.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git
+GIT Local Repository/git Learning/git-bash-learn (multiplication)
+$ git add .
+warning: could not open directory 'calculator-1/': Permission denied
+
+GIT Local Repository/git Learning/git-bash-learn (multiplication)
+$ git add .
+
+GIT Local Repository/git Learning/git-bash-learn (multiplication)
+$ git commit -m 'Multiplication of two integers'
+[multiplication db841f2] Multiplication of two integers
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+GIT Local Repository/git Learning/git-bash-learn (multiplication)
+$ git push -u origin multiplication
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 633 bytes | 316.00 KiB/s, done.
+Total 7 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+remote:
+remote: Create a pull request for 'multiplication' on GitHub by visiting:
+remote:      https://github.com/pashogus/git-bash-learn/pull/new/multiplication
+remote:
+To https://github.com/pashogus/git-bash-learn.git
+ * [new branch]      multiplication -> multiplication
+Branch 'multiplication' set up to track remote branch 'multiplication' from 'origin'.
+
+GIT Local Repository/git Learning/git-bash-learn (multiplication)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git merge multiplication --no-ff
+Merge made by the 'recursive' strategy.
+ calculator/src/pashogus/multiplication/MultiplicationImpl.java | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   calculator/src/pashogus/main/Main.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git add .
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git commit -m 'additional functionality with multilication of two integers'
+[master d7d9cbb] additional functionality with multilication of two integers
+ 1 file changed, 5 insertions(+)
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git tag V-2.0
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git push origin V-2.0
+Enumerating objects: 20, done.
+Counting objects: 100% (18/18), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 964 bytes | 241.00 KiB/s, done.
+Total 8 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/pashogus/git-bash-learn.git
+ * [new tag]         V-2.0 -> V-2.0
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/pashogus/git-bash-learn.git
+   5159ba9..d7d9cbb  master -> master
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+GIT Local Repository/git Learning/git-bash-learn (master)
+$
