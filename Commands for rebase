@@ -1,0 +1,431 @@
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git tag --list
+V-1.0
+V-2.0
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git show V-1.0
+tag V-1.0
+Tagger: Shanmugasundaram Palaninathan <shanmugasundaram.p2@cognizant.com>
+Date:   Sat Jul 17 23:36:42 2021 +0530
+
+Calculator with addition of Subraction of Two integers
+
+commit bfd64701814d00d387d9cdec2a3aa7a0461f34f3 (tag: V-1.0)
+Author: Shanmugasundaram Palaninathan <shanmugasundaram.p2@cognizant.com>
+Date:   Sat Jul 17 23:35:33 2021 +0530
+
+    calculator for two integers with addition and Subraction
+
+diff --git a/calculator/src/pashogus/main/Main.java b/calculator/src/pashogus/main/Main.java
+index 2faa0f1..d2a290d 100644
+--- a/calculator/src/pashogus/main/Main.java
++++ b/calculator/src/pashogus/main/Main.java
+@@ -1,10 +1,21 @@
+ package pashogus.main;
+
++import pashogus.addition.Addition;
++import pashogus.addition.AdditionImpl;
++import pashogus.subraction.Subraction;
++import pashogus.subraction.SubractionImpl;
++
+ public class Main {
+
+        public static void main(String[] args) {
+-               // TODO Auto-generated method stub
+
++               Addition addition = new AdditionImpl();
++               System.out.println(addition.add(3, 5));
++
++               Subraction subraction = new SubractionImpl();
++               System.out.println(subraction.sub(5, 3));
++
++
+        }
+
+ }
+
+/GIT Local Repository/git Learning/git-bash-learn (master)
+$ git checkout addition
+Switched to branch 'addition'
+Your branch is up to date with 'origin/addition'.
+
+/GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git tag --list
+V-1.0
+V-2.0
+
+/GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git show V-1.0
+tag V-1.0
+Tagger: Shanmugasundaram Palaninathan <shanmugasundaram.p2@cognizant.com>
+Date:   Sat Jul 17 23:36:42 2021 +0530
+
+Calculator with addition of Subraction of Two integers
+
+commit bfd64701814d00d387d9cdec2a3aa7a0461f34f3 (tag: V-1.0)
+Author: Shanmugasundaram Palaninathan <shanmugasundaram.p2@cognizant.com>
+Date:   Sat Jul 17 23:35:33 2021 +0530
+
+    calculator for two integers with addition and Subraction
+
+diff --git a/calculator/src/pashogus/main/Main.java b/calculator/src/pashogus/main/Main.java
+index 2faa0f1..d2a290d 100644
+--- a/calculator/src/pashogus/main/Main.java
++++ b/calculator/src/pashogus/main/Main.java
+@@ -1,10 +1,21 @@
+ package pashogus.main;
+
++import pashogus.addition.Addition;
++import pashogus.addition.AdditionImpl;
++import pashogus.subraction.Subraction;
++import pashogus.subraction.SubractionImpl;
++
+ public class Main {
+
+        public static void main(String[] args) {
+-               // TODO Auto-generated method stub
+
++               Addition addition = new AdditionImpl();
++               System.out.println(addition.add(3, 5));
++
++               Subraction subraction = new SubractionImpl();
++               System.out.println(subraction.sub(5, 3));
++
++
+        }
+
+ }
+
+/GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git rebase master
+error: could not apply 5f46c32... updated Changes for addition of two numbers after Merging with Master
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm <conflicted_files>", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 5f46c32... updated Changes for addition of two numbers after Merging with Master
+Auto-merging calculator/src/pashogus/main/Main.java
+CONFLICT (content): Merge conflict in calculator/src/pashogus/main/Main.java
+
+/GIT Local Repository/git Learning/git-bash-learn (addition|REBASE 1/1)
+$ git show 5f46c32
+commit 5f46c3229329997f800bcd4549ad778dc6d511d3 (origin/addition, addition)
+Author: Shanmugasundaram Palaninathan <shanmugasundaram.p2@cognizant.com>
+Date:   Sat Jul 17 23:53:26 2021 +0530
+
+    updated Changes for addition of two numbers after Merging with Master
+
+diff --git a/calculator/src/pashogus/main/Main.java b/calculator/src/pashogus/main/Main.java
+index 2faa0f1..2be2fbd 100644
+--- a/calculator/src/pashogus/main/Main.java
++++ b/calculator/src/pashogus/main/Main.java
+@@ -3,7 +3,7 @@ package pashogus.main;
+ public class Main {
+
+        public static void main(String[] args) {
+-               // TODO Auto-generated method stub
++
+
+        }
+
+
+/GIT Local Repository/git Learning/git-bash-learn (addition|REBASE 1/1)
+$ git status
+interactive rebase in progress; onto d7d9cbb
+Last command done (1 command done):
+   pick 5f46c32 updated Changes for addition of two numbers after Merging with Master
+No commands remaining.
+You are currently rebasing branch 'addition' on 'd7d9cbb'.
+  (fix conflicts and then run "git rebase --continue")
+  (use "git rebase --skip" to skip this patch)
+  (use "git rebase --abort" to check out the original branch)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+        both modified:   calculator/src/pashogus/main/Main.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Commands for V-2.0
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+/GIT Local Repository/git Learning/git-bash-learn (addition|REBASE 1/1)
+$ show d7d9cbb
+bash: show: command not found
+
+/GIT Local Repository/git Learning/git-bash-learn (addition|REBASE 1/1)
+$ git show d7d9cbb
+commit d7d9cbbe09f0c542fe215ccafac60f21e01de0c2 (HEAD, tag: V-2.0, origin/master, origin/HEAD, master)
+Author: Shanmugasundaram Palaninathan <shanmugasundaram.p2@cognizant.com>
+Date:   Sun Jul 18 00:29:06 2021 +0530
+
+    additional functionality with multilication of two integers
+
+diff --git a/calculator/src/pashogus/main/Main.java b/calculator/src/pashogus/main/Main.java
+index d2a290d..52620ee 100644
+--- a/calculator/src/pashogus/main/Main.java
++++ b/calculator/src/pashogus/main/Main.java
+@@ -2,6 +2,8 @@ package pashogus.main;
+
+ import pashogus.addition.Addition;
+ import pashogus.addition.AdditionImpl;
++import pashogus.multiplication.MultiplicationImpl;
++import pashogus.multiplication.Multipliction;
+ import pashogus.subraction.Subraction;
+ import pashogus.subraction.SubractionImpl;
+
+@@ -15,6 +17,9 @@ public class Main {
+                Subraction subraction = new SubractionImpl();
+                System.out.println(subraction.sub(5, 3));
+
++               Multipliction multiplication = new MultiplicationImpl();
++               System.out.println(multiplication.multiply(2, 3));
++
+
+        }
+
+
+/GIT Local Repository/git Learning/git-bash-learn (addition|REBASE 1/1)
+$ git status
+interactive rebase in progress; onto d7d9cbb
+Last command done (1 command done):
+   pick 5f46c32 updated Changes for addition of two numbers after Merging with Master
+No commands remaining.
+You are currently rebasing branch 'addition' on 'd7d9cbb'.
+  (fix conflicts and then run "git rebase --continue")
+  (use "git rebase --skip" to skip this patch)
+  (use "git rebase --abort" to check out the original branch)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+        both modified:   calculator/src/pashogus/main/Main.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Commands for V-2.0
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+/GIT Local Repository/git Learning/git-bash-learn (addition|REBASE 1/1)
+$ git add .
+
+/GIT Local Repository/git Learning/git-bash-learn (addition|REBASE 1/1)
+$ git status
+interactive rebase in progress; onto d7d9cbb
+Last command done (1 command done):
+   pick 5f46c32 updated Changes for addition of two numbers after Merging with Master
+No commands remaining.
+You are currently rebasing branch 'addition' on 'd7d9cbb'.
+  (all conflicts fixed: run "git rebase --continue")
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Commands for V-2.0
+        modified:   calculator/src/pashogus/main/Main.java
+
+
+/GIT Local Repository/git Learning/git-bash-learn (addition|REBASE 1/1)
+$ git rebase continue
+fatal: It seems that there is already a rebase-merge directory, and
+I wonder if you are in the middle of another rebase.  If that is the
+case, please try
+        git rebase (--continue | --abort | --skip)
+If that is not the case, please
+        rm -fr ".git/rebase-merge"
+and run me again.  I am stopping in case you still have something
+valuable there.
+
+
+/GIT Local Repository/git Learning/git-bash-learn (addition|REBASE 1/1)
+$ git rebase --continue
+[detached HEAD 80c5f7c] updated Changes for addition of two numbers after Merging with Master
+ 2 files changed, 296 insertions(+), 26 deletions(-)
+ create mode 100644 Commands for V-2.0
+ rewrite calculator/src/pashogus/main/Main.java (84%)
+Successfully rebased and updated refs/heads/addition.
+
+/GIT Local Repository/git Learning/git-bash-learn (addition)
+$ git log --all --oneline --decorate --graph
+* 80c5f7c (addition) updated Changes for addition of two numbers after Merging with Master
+* d7d9cbb (HEAD -> master, tag: V-2.0, origin/master, origin/HEAD) additional functionality with multilication of two integers
+*   54c2b3d Merge branch 'multiplication' with two integers
+|\
+| * db841f2 (origin/multiplication, multiplication) Multiplication of two integers
+|/
+* 5159ba9 Adding new Functionality for Multiplication of Two Integers
+* bfd6470 (tag: V-1.0) calculator for two integers with addition and Subraction
+*   f3ed7ce Merge branch 'subraction' with subraction of two integers
+|\
+| * 63e3902 (origin/subraction, subraction) subraction of two intergers
+* |   2d2aa8e Merge branch 'addition' with addition of two int method
+|\ \
+| |/
+|/|
+| | *   e26ce47 (refs/stash) stash 1
+| | |\
+| | | * 93f4a2a index on addition: 5f46c32 updated Changes for addition of two numbers after Merging with Master
+| | |/
+| | * 5f46c32 (origin/addition) updated Changes for addition of two numbers after Merging with Master
+| |/
+| * f759549 addition of two integers
+|/
+* 2260cf2 Initial commit for Calc Project
+* 628d31d Deleting changes
+* 1327402 updated Changes for int addition
+* f0c1a33 Commit with changes for Addition of integers
+* 2396385 Initial Commit for new project
+* 3cb8340 With branching and merging exercises
+*   aece2b5 Merge branch 'not-fast-forward-merge with newly created file 3 and 4'
+|\
+| * 7155eb8 (origin/not-fast-forward-merge, not-fast-forward-merge) file  number 4 for not-fast-forward-merge branch
+| * f378f1c file  number 3 for not-fast-forward-merge branch
+* | effd73d Merge branch 'not-fast-forward-merge with master for adding not-fast-forwd-merge txt file'
+|\|
+| * 17bc443 adding new file in not-fast-forward-merge branch
+* | 20597f6 Merge branch 'not-fast-forward-merge'
+|\|
+| * 567a085 new file for not-fast-forward-merge branch
+|/
+* e6d3d95 fast forward merge
+* 8289641 fast forward merge
+* cb09647 (origin/newbranch) file with command to push to new remote branch
+* 78aa574 crearted new file branchTesting.txt for Branch testing
+* 3386844 initial Commit
+* 58cb231 With Some Changes
+* 5966a4b how to create a new git repository by init how to make a existing project folder as git local repository adding git to existing project
+* 66754cf Commands used for understanding three stages of Git, Config setup, Status
+* 415bd58 initila commit
+:
+
+/GIT Local Repository/git Learning/git-bash-learn (subraction)
+
+
+
+/GIT Local Repository/git Learning/git-bash-learn (subraction)
+$ git status
+On branch subraction
+Your branch is up to date with 'origin/subraction'.
+
+nothing to commit, working tree clean
+
+/GIT Local Repository/git Learning/git-bash-learn (subraction)
+$ git rebase master
+Successfully rebased and updated refs/heads/subraction.
+
+/GIT Local Repository/git Learning/git-bash-learn (subraction)
+$ git log --all --oneline --decorate --graph
+* 80c5f7c (addition) updated Changes for addition of two numbers after Merging with Master
+* d7d9cbb (HEAD -> subraction, tag: V-2.0, origin/master, origin/HEAD, master) additional functionality with multilication of two integers
+*   54c2b3d Merge branch 'multiplication' with two integers
+|\
+| * db841f2 (origin/multiplication, multiplication) Multiplication of two integers
+|/
+* 5159ba9 Adding new Functionality for Multiplication of Two Integers
+* bfd6470 (tag: V-1.0) calculator for two integers with addition and Subraction
+*   f3ed7ce Merge branch 'subraction' with subraction of two integers
+|\
+| * 63e3902 (origin/subraction) subraction of two intergers
+* |   2d2aa8e Merge branch 'addition' with addition of two int method
+|\ \
+| |/
+|/|
+| | *   e26ce47 (refs/stash) stash 1
+| | |\
+| | | * 93f4a2a index on addition: 5f46c32 updated Changes for addition of two numbers after Merging with Master
+| | |/
+| | * 5f46c32 (origin/addition) updated Changes for addition of two numbers after Merging with Master
+| |/
+| * f759549 addition of two integers
+|/
+* 2260cf2 Initial commit for Calc Project
+* 628d31d Deleting changes
+* 1327402 updated Changes for int addition
+* f0c1a33 Commit with changes for Addition of integers
+* 2396385 Initial Commit for new project
+* 3cb8340 With branching and merging exercises
+*   aece2b5 Merge branch 'not-fast-forward-merge with newly created file 3 and 4'
+|\
+| * 7155eb8 (origin/not-fast-forward-merge, not-fast-forward-merge) file  number 4 for not-fast-forward-merge branch
+| * f378f1c file  number 3 for not-fast-forward-merge branch
+* | effd73d Merge branch 'not-fast-forward-merge with master for adding not-fast-forwd-merge txt file'
+|\|
+| * 17bc443 adding new file in not-fast-forward-merge branch
+* | 20597f6 Merge branch 'not-fast-forward-merge'
+|\|
+| * 567a085 new file for not-fast-forward-merge branch
+|/
+* e6d3d95 fast forward merge
+* 8289641 fast forward merge
+* cb09647 (origin/newbranch) file with command to push to new remote branch
+* 78aa574 crearted new file branchTesting.txt for Branch testing
+* 3386844 initial Commit
+* 58cb231 With Some Changes
+* 5966a4b how to create a new git repository by init how to make a existing project folder as git local repository adding git to existing project
+* 66754cf Commands used for understanding three stages of Git, Config setup, Status
+* 415bd58 initila commit
+:
+
+/GIT Local Repository/git Learning/git-bash-learn (addition)
+git lolog --all --oneline --decorate --graph
+* 80c5f7c (HEAD -> addition) updated Changes for addition of two numbers after Merging with Master
+* d7d9cbb (tag: V-2.0, origin/master, origin/HEAD, subraction, master) additional functionality with multilication of two integers
+*   54c2b3d Merge branch 'multiplication' with two integers
+|\
+| * db841f2 (origin/multiplication, multiplication) Multiplication of two integers
+|/
+* 5159ba9 Adding new Functionality for Multiplication of Two Integers
+* bfd6470 (tag: V-1.0) calculator for two integers with addition and Subraction
+*   f3ed7ce Merge branch 'subraction' with subraction of two integers
+|\
+| * 63e3902 (origin/subraction) subraction of two intergers
+* |   2d2aa8e Merge branch 'addition' with addition of two int method
+|\ \
+| |/
+|/|
+| | *   e26ce47 (refs/stash) stash 1
+| | |\
+| | | * 93f4a2a index on addition: 5f46c32 updated Changes for addition of two numbers after Merging with Master
+| | |/
+| | * 5f46c32 (origin/addition) updated Changes for addition of two numbers after Merging with Master
+| |/
+| * f759549 addition of two integers
+|/
+* 2260cf2 Initial commit for Calc Project
+* 628d31d Deleting changes
+* 1327402 updated Changes for int addition
+* f0c1a33 Commit with changes for Addition of integers
+* 2396385 Initial Commit for new project
+* 3cb8340 With branching and merging exercises
+*   aece2b5 Merge branch 'not-fast-forward-merge with newly created file 3 and 4'
+|\
+| * 7155eb8 (origin/not-fast-forward-merge, not-fast-forward-merge) file  number 4 for not-fast-forward-merge branch
+| * f378f1c file  number 3 for not-fast-forward-merge branch
+* | effd73d Merge branch 'not-fast-forward-merge with master for adding not-fast-forwd-merge txt file'
+|\|
+| * 17bc443 adding new file in not-fast-forward-merge branch
+* | 20597f6 Merge branch 'not-fast-forward-merge'
+|\|
+| * 567a085 new file for not-fast-forward-merge branch
+|/
+* e6d3d95 fast forward merge
+* 8289641 fast forward merge
+* cb09647 (origin/newbranch) file with command to push to new remote branch
+* 78aa574 crearted new file branchTesting.txt for Branch testing
+* 3386844 initial Commit
+* 58cb231 With Some Changes
+* 5966a4b how to create a new git repository by init how to make a existing project folder as git local repository adding git to existing project
+* 66754cf Commands used for understanding three stages of Git, Config setup, Status
+* 415bd58 initila commit
+* 24756b2 Initial commit
+
+
+
+
+/GIT Local Repository/git Learning/git-bash-learn (addition)
+$
+/GIT Local Repository/git Learning/git-bash-learn (addition)
+$
